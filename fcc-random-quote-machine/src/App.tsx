@@ -1,14 +1,15 @@
+import { useState } from 'react'
 import { Fragment } from 'react/jsx-runtime'
 import Wrapper from './components/Wrapper/Wrapper'
 import GlobalStyle from './styles/Global.styles'
 import CardQuote from './components/CardQuote/CardQuote'
-import { useState } from 'react'
+import XBtn from './components/Xbtn/XBtn'
 import { getRandomIndex } from './utils'
-import { quotes } from './data'
-import { Button } from './styles/App.styles'
+import { quotes, twitterIntent, type QuotesType } from './data'
+import { ActionStyled, Button, TweetLink } from './styles/App.styles'
 
 function App() {
-  const [currentQuotes, setCurrentQuotes] = useState(
+  const [currentQuotes, setCurrentQuotes] = useState<QuotesType>(
     quotes[getRandomIndex(quotes)]
   )
 
@@ -21,9 +22,19 @@ function App() {
       <GlobalStyle />
       <Wrapper id="quote-box">
         <CardQuote quote={currentQuotes.quote} author={currentQuotes.author} />
-        <Button id="new-quote" onClick={changeQuotes}>
-          Change Quote
-        </Button>
+        <ActionStyled>
+          <TweetLink
+            id="tweet-quote"
+            target="_blank"
+            // href={twitterIntent(currentQuotes.quote)}
+            href={`https://twitter.com/intent/tweet?text=${currentQuotes.quote}`}
+          >
+            <XBtn />
+          </TweetLink>
+          <Button id="new-quote" onClick={changeQuotes}>
+            Change Quote
+          </Button>
+        </ActionStyled>
       </Wrapper>
     </Fragment>
   )

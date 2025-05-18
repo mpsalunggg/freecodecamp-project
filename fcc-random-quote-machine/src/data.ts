@@ -3,6 +3,10 @@ export type QuotesType = {
   author: string
 }
 
+export const twitterIntent = (quote: string) => {
+  return `twitter.com/intent/post?text=${quote}`
+}
+
 export const quotes: QuotesType[] = [
   {
     quote: 'The only way to do great work is to love what you do.',
