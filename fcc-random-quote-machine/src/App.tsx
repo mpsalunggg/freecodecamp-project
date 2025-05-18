@@ -5,7 +5,7 @@ import GlobalStyle from './styles/Global.styles'
 import CardQuote from './components/CardQuote/CardQuote'
 import XBtn from './components/Xbtn/XBtn'
 import { getRandomIndex } from './utils'
-import { quotes, twitterIntent, type QuotesType } from './data'
+import { quotes, type QuotesType } from './data'
 import { ActionStyled, Button, TweetLink } from './styles/App.styles'
 
 function App() {
