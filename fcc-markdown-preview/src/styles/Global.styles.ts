@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     background-color:rgb(225, 225, 225);
     font-family: 'Inter', sans-serif;
+    margin: 0;
   }
 `
 
