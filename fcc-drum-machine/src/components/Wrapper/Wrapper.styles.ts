@@ -7,5 +7,4 @@ export const WrapperContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 2rem;
 `
