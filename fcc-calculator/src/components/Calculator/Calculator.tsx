@@ -1,8 +1,9 @@
-import { Button, CalculatorWrapper } from './Calculator.styles'
+import { Button, CalculatorWrapper, DisplayResult } from './Calculator.styles'
 
 const Calculator = () => {
   return (
     <CalculatorWrapper>
+      <DisplayResult />
       <Button spanColTwo red id="clear">
         AC
       </Button>

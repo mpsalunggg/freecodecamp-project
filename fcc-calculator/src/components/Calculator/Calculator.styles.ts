@@ -36,3 +36,9 @@ export const Button = styled.button<{
   ${({ red }) => red && `background-color: #b13d3d;`}
   ${({ blue }) => blue && `background-color: #054b6d;`}
 `
+
+export const DisplayResult = styled.div`
+  background-color: black;
+  grid-column: span 4;
+  color: white;
+`
