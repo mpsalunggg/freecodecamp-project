@@ -38,7 +38,17 @@ export const Button = styled.button<{
 `
 
 export const DisplayResult = styled.div`
-  background-color: black;
+  background-color: gray;
   grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+  padding: 12px;
   color: white;
+  gap: 12px;
+`
+
+export const TextResult = styled.span`
+  font-size: 20px;
 `
