@@ -5,6 +5,7 @@ import {
   DisplayResult,
   TextResult,
 } from './Calculator.styles'
+import * as math from 'mathjs'
 
 const Calculator = () => {
   const [temp, setTemp] = useState('')
@@ -98,7 +99,7 @@ const Calculator = () => {
   }
 
   const handleEquals = () => {
-    const res = eval(temp.replace(/x/g, '*'))
+    const res = math.evaluate(temp.replace(/x/g, '*'))
 
     setTemp((prev) => prev + '=' + res)
     setResult(res)
